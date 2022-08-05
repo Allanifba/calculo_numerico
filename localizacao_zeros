@@ -19,3 +19,6 @@ function[  ] = mlz(f,a,b,n)
     endif 
   endwhile 
 endfunction
+
+
+%Exemplo: após executar copie na Janela de Comandos o código bissecao(f = @(x)x^2-2, 0, 1, 10).
