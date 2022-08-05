@@ -32,15 +32,15 @@ while True:
         print('\n **********************************************************************************\n')
         print('             Autoria: Allan de Sousa Soares - IFBA VDC             ')
         print('Canal: https://www.youtube.com/c/MatematicaParaGenteGrande\n')
-        esc = input('Digite menu para voltar ao menu princial ou aperte enter para continuar: ')
-        if esc == 'menu':
-            fgeral()
+        esc = input('Digite qualquer tecla para continuar: ')
+    
     else:
         print(' -----------------------------------  RESPOSTA  -----------------------------------')
         print(f' Não é recomendada a aplicação do Método de Localização de Zeros no intervalo [a,b]'
               f'\n pois, f(a)={f(a)} e f(b)={f(b)} tem sinas iguais.')
         print(' ----------------------------------------------------------------------------------')
         print('             Autoria: Allan de Sousa Soares - IFBA VDC             ')
+        esc = input('Digite qualquer tecla para continuar: ')
 
 
 
