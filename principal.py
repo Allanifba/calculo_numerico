@@ -1,1 +1,0 @@
-from geral import fgeral
