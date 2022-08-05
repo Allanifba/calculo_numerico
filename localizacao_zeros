@@ -1,0 +1,21 @@
+%Programa em Octave referente ao método de delimitação/isolamento de zeros de uma função.
+
+
+clc
+clear all
+format long
+
+function[  ] = mlz(f,a,b,n) 
+  gamma = (b-a)/n ;
+  while   a<=b 
+    fa=f(a) ;
+    if fa == 0 
+      printf ("%d  é um zero de  f \n ",  a )
+    endif 
+    fc=f(a+gamma) ;
+    a=a+gamma ;
+    if   fa*fc < 0 
+      printf ("Existe ao menos um zero entre  \%d  e  \%d   \n",  a-gamma , a );
+    endif 
+  endwhile 
+endfunction
