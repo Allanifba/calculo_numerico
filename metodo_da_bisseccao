@@ -1,0 +1,25 @@
+clc
+clear all
+format long
+
+function[p] = bissecao(f, a, b, TOL, N)
+ i = 1;
+ fa = f(a);
+ while (i <= N)
+  p = a + (b - a)/2;
+  fp = f(p);
+  if ((fp == 0)||((b - a)/2 < TOL))
+   return;
+  endif
+  i = i + 1;
+  if (fa*fp > 0)
+   a = p;
+   fa = fp;
+  else
+   b = p;
+  endif
+ endwhile
+ printf("erro: O procedimento não foi bem sucedido");
+endfunction
+
+%Exemplo: após executar copie na Janela de Comandos o código bissecao(f = @(x)x^2-2, 0, 1, 10^(-6), 50).
