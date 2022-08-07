@@ -18,29 +18,29 @@ while True:
     gamma = (b - a) / n
 
     f = lambda x: eval(F)
-    if f(a) * f(b) < 0:
-        i = 0
-        print('\n ***********************************  RESPOSTA  ***********************************\n')
-        while a < b:
-            fa = f(a)
-            if fa == 0:
-                print(f' {a} é um zero de f.')
-            fc = f(a + gamma)
-            a = a + gamma
-            if fa * fc < 0:
-                print(' Existe um zero no intervalo [%0.5f,%0.5f]' % (a - gamma, a))
-        print('\n **********************************************************************************\n')
-        print('             Autoria: Allan de Sousa Soares - IFBA VDC             ')
-        print('Canal: https://www.youtube.com/c/MatematicaParaGenteGrande\n')
-        esc = input('Digite qualquer tecla para continuar: ')
-    
-    else:
-        print(' -----------------------------------  RESPOSTA  -----------------------------------')
-        print(f' Não é recomendada a aplicação do Método de Localização de Zeros no intervalo [a,b]'
-              f'\n pois, f(a)={f(a)} e f(b)={f(b)} tem sinas iguais.')
-        print(' ----------------------------------------------------------------------------------')
-        print('             Autoria: Allan de Sousa Soares - IFBA VDC             ')
-        esc = input('Digite qualquer tecla para continuar: ')
+    i = 0
+    k=0
+    print('\n ***********************************  RESPOSTA  ***********************************\n')
+    while a < b:
+        fa = f(a)
+        if fa == 0:
+            k=k+1
+            print(f' {a} é um zero de f.')
+        fc = f(a + gamma)
+        a = a + gamma
+        if fa * fc < 0:
+            k=k+1
+            print(' Existe um zero no intervalo [%0.5f,%0.5f]' % (a - gamma, a))
+    if k==0:
+        print(' Não foram localizados zeros.')
+    print('\n **********************************************************************************\n')
+    print('                       Autoria: Allan de Sousa Soares - IFBA VDC                       ')
+    print('             Canal: https://www.youtube.com/c/MatematicaParaGenteGrande\n              ')
+    esc = input('Digite qualquer tecla para continuar: ')
+
+
+
+
 
 
 
