@@ -1,0 +1,19 @@
+clc
+clear all
+format long
+
+function[p] = MN(f, df, p0, TOL, N)
+ i = 1;
+ while (i <= N)
+  p = p0 - f(p0)/df(p0)
+  delta=abs(p-p0)
+  if (abs(p0 - p) < TOL)
+   return
+  endif
+  i = i + 1;
+  p0 = p;
+ endwhile
+ printf("error: O procedimento não foi bem sucedido.")
+endfunction
+
+%MN(f = @(x)x^2-2, df = @(x)2*x,1, 10^-6, 10)
