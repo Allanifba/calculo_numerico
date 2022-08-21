@@ -45,7 +45,5 @@ while True:
         print('             Autoria: Allan de Sousa Soares - IFBA VDC             ')
         print('Canal: https://www.youtube.com/c/MatematicaParaGenteGrande\n')
 
-        esc = input('Digite menu para voltar ao menu princial ou aperte enter para continuar: ')
-        if esc == 'menu':
-            fgeral()
-
+        esc = input('Digite qualquer tecla para continuar: ')
+        
