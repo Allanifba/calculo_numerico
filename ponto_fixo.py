@@ -31,5 +31,5 @@ while True:
     print('             Autoria: Allan de Sousa Soares - IFBA VDC             ')
     print('Canal: https://www.youtube.com/c/MatematicaParaGenteGrande\n')
     
-    esc = input('Digite qualquer tecla para continuar: ')
+    esc = input('Digite Enter para continuar: ')
     
