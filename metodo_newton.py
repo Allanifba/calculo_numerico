@@ -34,7 +34,6 @@ while True:
         print('\n **********************************************************************************\n')
         print('             Autoria: Allan de Sousa Soares - IFBA VDC             ')
         print('Canal: https://www.youtube.com/c/MatematicaParaGenteGrande\n')
-
         esc = input('Digite Enter para continuar: ')
         
     else:
@@ -43,6 +42,5 @@ while True:
         print(' ----------------------------------------------------------------------------------')
         print('             Autoria: Allan de Sousa Soares - IFBA VDC             ')
         print('Canal: https://www.youtube.com/c/MatematicaParaGenteGrande\n')
-
         esc = input('Digite Enter para continuar: ')
         
