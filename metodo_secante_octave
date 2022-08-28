@@ -17,7 +17,7 @@ function[p] = Sec(f, p0, p1, TOL, N)
   p1 = p;
   s1 = f(p);
  endwhile
- printf("error: O procedimento n„o foi bem sucedido.")
+ printf("error: O procedimento n√£o foi bem sucedido.")
 endfunction
 
 %Sec(f=@(x)cos(x)-x,0,pi/4,10^(-2),10)
