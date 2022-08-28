@@ -1,0 +1,42 @@
+clc
+clear all
+format long
+
+function[I] = MDZ(A)
+  if A(1) == 1
+  C = A;
+  else
+  C = (1/A(1))*A;
+  endif
+  i = 2;
+  M = -inf;
+  while i <= length(A)
+   C(i) = abs(C(i)^(1/(i-1)));
+   if C(i) > M
+   M = C(i);
+   endif
+   i = i + 1;
+  endwhile
+  j = 1;
+  while j <= length(A)
+  B(j) = A(length(A) - j + 1);
+  j = j + 1;
+  endwhile
+  if B(1) == 1
+  D = B;
+  else
+  D = (1/B(1))*B;
+  endif
+  k = 2;
+  m = -inf;
+  while k <= length(B)
+   D(k) = abs(D(k)^(1/(k - 1)));
+   if D(k) > m
+   m = D(k);
+   endif
+   k = k + 1;
+  endwhile
+  printf("Os zeros de P(x) estão pertencem ao intervalo [%d;%d]U[%d;%d].\n",-2*M,-1/(2*m), 1/m,2*M)
+endfunction
+
+
