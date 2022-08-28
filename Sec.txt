@@ -1,0 +1,23 @@
+clc
+clear all
+format long
+
+function[p] = Sec(f, p0, p1, TOL, N)
+ i = 2;
+ s0 = f(p0);
+ s1 = f(p1);
+ while (i <= N)
+  p = p1 - s1*(p1 - p0)/(s1 - s0);
+  if (abs(p1 - p) < TOL)
+   return
+  endif
+  i = i + 1;
+  p0 = p1;
+  s0 = s1;
+  p1 = p;
+  s1 = f(p);
+ endwhile
+ printf("error: O procedimento não foi bem sucedido.")
+endfunction
+
+%Sec(f=@(x)cos(x)-x,0,pi/4,10^(-2),10)
